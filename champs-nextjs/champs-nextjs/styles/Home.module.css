@@ -25,10 +25,3 @@
   color: white;
   border-radius: 4rem;
 }
-
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
-}
