@@ -1,0 +1,35 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.grid {
+  background: red;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.grid-item {
+  background: green;
+  width: 100%;
+  border: 1px solid black;
+}
+
+.champ {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.champ__image {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.champ__details {
+  background: black;
+  padding: 18px;
+  color: white;
+}
