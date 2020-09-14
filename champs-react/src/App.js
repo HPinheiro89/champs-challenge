@@ -4,43 +4,49 @@ import Champ from "./components/Champ";
 
 const champs = [
   {
-    name: "Nocture",
+    name: "Nocturne",
     image:
-      "https://vignette.wikia.nocookie.net/leagueoflegends/images/e/e5/Nocturne_OriginalLoading.jpg/revision/latest/scale-to-width-down/340?cb=20200425022321"
+      "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/3/39/Skin_Loading_Screen_Cursed_Revenant_Nocturne.jpg/revision/20191215003644/scale-to-width-down/308",
+    title: '"The Eternal Nightmare"'
   },
   {
-    name: "Nocture",
+    name: "Leona",
     image:
-      "https://vignette.wikia.nocookie.net/leagueoflegends/images/e/e5/Nocturne_OriginalLoading.jpg/revision/latest/scale-to-width-down/340?cb=20200425022321"
+      "https://lolskin.weblog.vc/img/wallpaper/loading/Leona_11.jpg?10.13.1",
+    title: '"The Radiant Dawn"'
   },
   {
-    name: "Nocture",
+    name: "Vi",
     image:
-      "https://vignette.wikia.nocookie.net/leagueoflegends/images/e/e5/Nocturne_OriginalLoading.jpg/revision/latest/scale-to-width-down/340?cb=20200425022321"
+      "https://lolskin.weblog.vc/img/wallpaper/loading/Vi_2.jpg?10.13.1",
+    title: '"The Piltover Enforcer"'
   },
   {
-    name: "Nocture",
+    name: "Jinx",
     image:
-      "https://vignette.wikia.nocookie.net/leagueoflegends/images/e/e5/Nocturne_OriginalLoading.jpg/revision/latest/scale-to-width-down/340?cb=20200425022321"
+      "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/d/d2/Skin_Loading_Screen_PROJECT_Jinx.jpg/revision/latest/scale-to-width-down/308?cb=20190728230506",
+    title: '"The Loose Canon"'
   },
   {
-    name: "Nocture",
+    name: "Tahm Kench",
     image:
-      "https://vignette.wikia.nocookie.net/leagueoflegends/images/e/e5/Nocturne_OriginalLoading.jpg/revision/latest/scale-to-width-down/340?cb=20200425022321"
+      "https://lolskinshop.com/wp-content/uploads/2015/06/TahmKench_1.jpg",
+    title: '"The River King"'
   },
   {
-    name: "Nocture",
+    name: "Skarner",
     image:
-      "https://vignette.wikia.nocookie.net/leagueoflegends/images/e/e5/Nocturne_OriginalLoading.jpg/revision/latest/scale-to-width-down/340?cb=20200425022321"
+      "https://i.pinimg.com/originals/4f/ac/b9/4facb933740ce1fd8e523ea671f78571.jpg",
+    title: '"The Crystal Vanguard"'
   },
 ];
 
 export default function App() {
   return (
-    <div className="grid">
+    <div className="container">
       {champs.map((c, index) => (
-        <div key={`c.name-${index}`} className="grid-item">
-          <Champ name={c.name} image={c.image} />
+        <div key={`c.name-${index}`} className="flex-item">
+          <Champ name={c.name} image={c.image} title={c.title}/>
         </div>
       ))}
     </div>
