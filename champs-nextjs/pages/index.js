@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Champ from "../components/Champ";
+import Link from 'next/link'
 
 
 const champs = [
@@ -41,6 +42,14 @@ const champs = [
   },
 ];
 
+const MyButton = React.forwardRef(({ onClick, href }, ref) => {
+  return (
+    <a href={href} onClick={onClick} ref={ref}>
+      More Info
+    </a>
+  )
+})
+
 export default function App() {
   return ( <div>
     <h1>Favorite League Champs</h1>
@@ -48,6 +57,9 @@ export default function App() {
       {champs.map((c, index) => (
         <div key={`c.name-${index}`} className="flex-item">
           <Champ name={c.name} image={c.image} title={c.title}/>
+          <Link href="/champ-info/details" passHref>
+            <MyButton />
+          </Link>
         </div>
       ))}
     </div>
