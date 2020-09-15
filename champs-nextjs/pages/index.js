@@ -42,13 +42,15 @@ const champs = [
 ];
 
 export default function App() {
-  return (
+  return ( <div>
+    <h1>Favorite League Champs</h1>
     <div className="container">
       {champs.map((c, index) => (
         <div key={`c.name-${index}`} className="flex-item">
           <Champ name={c.name} image={c.image} title={c.title}/>
         </div>
       ))}
+    </div>
     </div>
   );
 }
